@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Eid Mubarak My Jaan 💖</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle at top, #1a2a6c, #0f2027);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+
+.moon {
+    position: absolute;
+    top: 40px;
+    right: 70px;
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(255,255,255,0.9);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(14px);
+    padding: 45px;
+    border-radius: 30px;
+    text-align: center;
+    width: 85%;
+    max-width: 520px;
+    box-shadow: 0 0 40px rgba(255,255,255,0.25);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+}
+
+h1 {
+    font-size: 44px;
+    background: linear-gradient(to right, #ffecd2, #fcb69f, #ffecd2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 22px;
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+button {
+    margin-top: 30px;
+    padding: 14px 38px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(to right, #ffb347, #ffd700);
+    font-size: 17px;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#message {
+    display: none;
+    margin-top: 30px;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.85); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="moon"></div>
+
+<div class="card">
+    <h1>✨ Eid Mubarak ✨</h1>
+    <h2>To My Jaan 💖</h2>
+
+    <p>
+        On this beautiful Eid night,  
+        my heart makes a special dua just for you 🌙
+    </p>
+
+    <button onclick="openHeart()">Open My Heart 💌</button>
+
+    <div id="message">
+        <p>
+            My Jaan 💕<br><br>
+            May Allah fill your life with happiness,  
+            your heart with peace,  
+            and your days with endless smiles ✨<br><br>
+
+            Every Eid, every prayer, every dream —  
+            you are always in my dua 🤍🌙<br><br>
+
+            <b>Eid Mubarak, my forever Jaan 💖</b>
+        </p>
+    </div>
+</div>
+
+<script>
+function openHeart() {
+    document.getElementById("message").style.display = "block";
+}
+
+for (let i = 0; i < 45; i++) {
+    let star = document.createElement("div");
+    star.className = "star";
+    star.style.width = star.style.height = Math.random() * 3 + 2 + "px";
+    star.style.top = Math.random() * 100 + "vh";
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.animationDuration = Math.random() * 2 + 1 + "s";
+    document.body.appendChild(star);
+}
+</script>
+
+</body>
+</html>
+
+
